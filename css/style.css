@@ -1,0 +1,284 @@
+html {
+  scroll-behavior: smooth;
+  font-size: 13px;
+}
+
+body {
+	height: 100vh;
+}
+
+.container {
+	padding: 0;
+}
+
+h1, h2 {
+	text-align: center;
+	line-height: 1.5;
+	font-size: 1rem;
+}
+
+h2.display-4 {
+	font-size: 2rem;
+}
+
+footer {
+	text-align: center;
+}
+
+/*.table th:nth-child(3), .table th:last-child(), .table td:nth-child(3), .table td:last-child() {
+		display: none !important;
+	}*/
+
+/*.table th:nth-child(3), .table td:nth-child(3), .table th:nth-child(4), .table td:nth-child(4) {
+	display: none !important;
+}*/
+
+#spassov {
+	display: flex; 
+	align-items: center; 
+	justify-content: center
+}
+
+#spassov img {
+	width: 50%;
+}
+
+article {
+	position: relative;
+}
+
+article > span {
+	position: absolute;
+	top: -5rem;
+}
+
+a {
+	cursor: pointer;
+}
+
+.mt-extra {
+	margin-top: 4rem;
+	/*margin-top: 5rem;*/
+}
+
+.off-white {
+	background: #F5F1F0;
+}
+
+.flex-container-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flex-container-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#support h5 {
+	margin-bottom: 0 !important;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.vcenter {
+	align-self: center;
+}
+
+.navbar {
+	padding: 1rem 1rem !important;
+}
+
+.card {
+	width: 100%;
+	padding: 0.2rem 1rem;
+	margin: auto;
+}
+
+.controls {
+	display: flex;
+	justify-content: space-between;
+}
+
+#step2, #step3, #step4 {
+	display: none;
+}
+
+/*.form-control {
+	height: 3rem !important;
+}*/
+
+input[type='file'].form-control {
+	padding: 0;
+}
+
+.btn--correct {
+	height: 3rem !important;
+}
+
+label {
+	padding: 0.8rem;
+}
+
+.btn-facebook {
+	background: #3B5998;
+}
+
+.btn-tweeter {
+	background: #55ACEE;
+}
+
+.btn-google {
+	background: #DD4B39;
+}
+
+.btn-linkedin {
+	background: #0082CA;
+}
+
+.text-large {
+	font-size: 1rem;
+}
+
+@media (min-width: 400px) {
+	#spassov img {
+		width: 40%;
+	}
+}
+
+@media (min-width: 576px) {
+
+	.container {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+	h1 {
+		font-size: 1.5rem;
+	}
+
+	h2 {
+		font-size: 1.25rem;
+	}
+
+	#spassov img {
+		width: 30%;
+	}
+}
+
+@media (min-width: 768px) {
+
+	h1, h2 {
+		text-align: left;
+	}
+
+	h2.display-4 {
+		font-size: 3.5rem;
+	}
+
+	#spassov img {
+		width: 100%;
+	}
+
+	footer {
+		text-align: left;
+	}
+
+	footer ul li>a {
+		font-size: 1.125rem;
+	}
+
+	.text-large {
+		font-size: 1.2rem;
+	}
+
+	/*.table th:nth-child(3), .table td:nth-child(3), .table th:nth-child(4), .table td:nth-child(4) {
+		display: table-cell !important;
+	}*/
+}
+
+@media (min-width: 992px) {
+	html {
+		font-size: 16px;
+	}
+
+	h2 {
+		font-size: 1.75rem;
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	.card {
+		width: 65%;
+	}
+
+	#spassov img {
+		width: 80%;
+	}
+
+	footer ul li>a {
+		font-size: 1rem;
+	}
+}
+
+@media (min-width: 1200px) {
+
+	#spassov img {
+		width: 70%;
+	}
+
+	.hide-lg-up {
+		display: none;
+	}
+}
+
+@media (max-width: 760px) {
+
+	#winners, #winners thead, #winners tbody, #winners th, #winners tr { 
+		display: block !important; 
+		background: white !important;
+	}
+	
+	#winners thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	#winners tr { 
+		border: 1px solid #ccc; 
+		margin: 1rem 0;
+	}
+	
+	#winners td { 
+		display: flex;
+		border: none;
+		border-bottom: 1px solid #eee; 
+	}
+	
+	#winners td:before { 
+		padding-right: 10px; 
+		white-space: nowrap;
+		width: 50%;
+		color: black;
+		text-transform: uppercase;
+	}
+
+	#winners td:nth-child(even) {
+		background: #F2F2F2 !important;
+	}
+	
+	
+	#winners td:nth-of-type(1):before { content: "Prize"; }
+	#winners td:nth-of-type(2):before { content: "Name"; }
+	#winners td:nth-of-type(3):before { content: "Country"; }
+	#winners td:nth-of-type(4):before { content: "Work"; }
+}

@@ -1,0 +1,4 @@
+AuthUserFile C:\xampp\spassovcompetition\.htpasswd
+AuthType Basic
+AuthName "Uploaded Files"
+Require valid-user
