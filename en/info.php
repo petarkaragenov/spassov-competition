@@ -13,13 +13,13 @@
 			      <li class="nav-item">
 			        <a class="nav-link" href="home">Home </a>
 			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link active" href="info#requirements">Requirements</a>
+			      <li id="section1" class="nav-item active">
+			        <a class="nav-link" href="info#requirements">Requirements</a>
 			      </li>
-			      <li class="nav-item">
+			      <li id="section2" class="nav-item">
 			        <a class="nav-link" href="info#jury">Jury</a>
 			      </li>
-			      <li class="nav-item">
+			      <li id="section3" class="nav-item">
 			        <a class="nav-link" href="info#prizes">Prizes</a>
 			      </li>
 			      <li class="nav-item">
@@ -33,8 +33,8 @@
 			      </li>
 			    </ul>
 	      		<a href="apply" class="btn btn-secondary my-2 my-sm-0 d-none d-lg-block">Apply Now</a>
-	      		<a href="../bg/home" class="text-white ml-3 d-none d-lg-block">BG</a>
-	      		<a href="../en/home" class="text-white ml-2 d-none d-lg-block">EN</a>
+	      		<a href="../bg/info" class="text-white ml-3 d-none d-lg-block">BG</a>
+	      		<a href="../en/info" class="text-white ml-2 d-none d-lg-block">EN</a>
 	  		</div>
 	  	</div>
 	  	
@@ -165,29 +165,5 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-	<script>
-		$('article:first-child').waypoint(function(direction) {
-			$('.nav-item').removeClass('active');
-		    $('#section1').addClass('active');
-		}, { offset: '0' });
-		  
-		$('article:nth-child(2)').waypoint(function(direction) {
-		  if (direction === 'down') {
-		    $('.nav-item').removeClass('active');
-		    $('#section2').addClass('active');
-		  }
-		}, { offset: '30%' });
-		$('article:nth-child(2)').waypoint(function(direction) {
-		  if (direction === 'up') {
-		    $('.nav-item').removeClass('active');
-		    $('#section2').addClass('active');
-		  }
-		}, { offset: '0' });
-
-		$('article:last-child').waypoint(function(direction) {
-			$('.nav-item').removeClass('active');
-		    $('#section3').addClass('active');
-		}, { offset: '30%' });
-
-	</script>
+	<script src="../js/infoNavigation.js"></script>
 </body>

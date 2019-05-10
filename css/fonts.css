@@ -1,0 +1,34 @@
+@font-face {
+  font-family: NunitoSansLight;
+  src: url(../fonts/NunitoSans-Light.ttf);
+}
+
+@font-face {
+  font-family: NunitoSansRegular;
+  src: url(../fonts/NunitoSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: NunitoSansBold;
+  src: url(../fonts/NunitoSans-SemiBold.ttf);
+}
+
+body {
+	font-family: NunitoSansLight;
+	font-weight: normal;
+}
+
+.nav-link, .btn, a {
+	font-family: NunitoSansRegular;
+	font-weight: normal !important;
+}
+
+h1, h2, h3, h4, h5, h6, .display-2, .display-4, thead th {
+	font-family: NunitoSansRegular;
+	font-weight: normal;
+}
+
+li.font-weight-bold {
+	font-family: NunitoSansBold;
+	font-weight: normal !important;
+}

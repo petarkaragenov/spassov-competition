@@ -52,6 +52,11 @@ article > span {
 	top: -5rem;
 }
 
+.btn-lg {
+	padding-top: 1.5rem !important;
+	padding-bottom: 1.5rem !important;
+}
+
 a {
 	cursor: pointer;
 }
@@ -110,9 +115,9 @@ a {
 	display: none;
 }
 
-/*.form-control {
+.form-control--fix {
 	height: 3rem !important;
-}*/
+}
 
 input[type='file'].form-control {
 	padding: 0;
@@ -169,6 +174,11 @@ label {
 
 	#spassov img {
 		width: 30%;
+	}
+
+	.btn-lg {
+		padding-top: 1.735rem !important;
+		padding-bottom: 1.735rem !important;
 	}
 }
 

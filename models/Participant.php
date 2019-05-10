@@ -21,13 +21,13 @@
 			$this->db->bind(':address', $data['address']);
 			$this->db->bind(':first_score', $data['first_score']);
 			$this->db->bind(':second_score', $data['second_score']);
-			$this->db->bind(':audio', $data['audio']);
+			$this->db->bind(':audio', $data['audio']); 
 
-			move_uploaded_file($_FILES['score1']['tmp_name'], 'upload/'.$data['first_score']);
+			move_uploaded_file($_FILES['score1']['tmp_name'], '../upload/'.$data['first_score']);
 			if (!empty($_FILES['score2']['tmp_name'])) {
-				move_uploaded_file($_FILES['score2']['tmp_name'], 'upload/'.$data['second_score']);
+				move_uploaded_file($_FILES['score2']['tmp_name'], '../upload/'.$data['second_score']);
 			}
-			move_uploaded_file($_FILES['audio']['tmp_name'], 'upload/'.$data['audio']);
+			move_uploaded_file($_FILES['audio']['tmp_name'], '../upload/'.$data['audio']);
 
 			if ($this->db->execute()) {
 				return true;

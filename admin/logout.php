@@ -3,5 +3,5 @@
 
 	session_destroy();
 
-	header('Location: ../home');
+	header('Location: ../bg/home');
 ?>

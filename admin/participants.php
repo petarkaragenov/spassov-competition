@@ -68,7 +68,7 @@
 							<td>
 								<?php 
 									if ($participant->p_second_score !== 'Not Provided') { ?>
-										<a href=<?php echo "../upload/".$participant->p_second_score; ?>></a>
+										<a href=<?php echo "../upload/".$participant->p_second_score; ?>><?php echo $participant->p_second_score; ?></a>
 									<?php } else { ?>
 										<?php echo $participant->p_second_score; ?>
 									<?php } ?>

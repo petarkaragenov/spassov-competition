@@ -11,7 +11,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>International Composition Competition Prof. Ivan Spassov</title>
+	<title>Международен конкурс Проф. Иван Спасов</title>
 	<link rel="icon" href="../images/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/lux/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/style.css">
@@ -23,11 +23,11 @@
 	  </div>
 	</nav>
 	<div class="container">
-		<h2 class="mt-4">Thank you for your application</h2>
+		<h2 class="mt-4">Благодарим за вашето заявление за участие!</h2>
 		<hr>
-		<p>Your transaction ID is <?php echo $tid; ?></p>
-		<p>Further Information will be delivered per Email.</p>
-		<p><a href="home" class="btn btn-light mt-2">Go Back</a></p>
+		<p>ID номерът на вашата трансакция е <?php echo $tid; ?></p>
+		<p>Очаквайте допълнителна информация на Вашия Email адрес.</p>
+		<p><a href="home" class="btn btn-light mt-2">Назад</a></p>
 	</div>
 </body>
 </html>

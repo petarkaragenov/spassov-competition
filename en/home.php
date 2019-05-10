@@ -49,10 +49,10 @@
 				<div class="col col-lg-9 d-flex">
 					<div class="flex-container-column">
 						<h1 class="vcenter ">8<sup>th</sup> International Composition Competition “Prof. Ivan Spassov” 28 – 30 November, 2019</h1>
-						<div class="flex-container-row mb-2 mb-lg-5">
-							<h4 class="d-none d-lg-block">Aplications are currently Open!</h4>
-							<a href="apply" class="btn btn-lg btn-primary mr-5 d-none d-md-block">Apply Now</a>
-							<a href="apply" class="btn btn-lg btn-block btn-primary mr-mf-5 d-md-none">Apply Now</a>
+						<div class="flex-container-row mb-2 mb-lg-5 justify-content-md-end justify-content-lg-between">
+							<h4 class="d-none d-lg-block">Applications are currently Open!</h4>
+							<a href="apply" class="btn btn-lg btn-primary mr-5 d-none d-md-block float-md-right">Apply Now</a>
+							<a href="apply" class="mx-3 mx-sm-0 btn btn-lg btn-block btn-primary mr-mf-5 d-md-none">Apply Now</a>
 						</div>
 					</div>
 				</div>

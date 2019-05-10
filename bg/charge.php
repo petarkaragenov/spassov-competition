@@ -43,6 +43,8 @@
 		return false;
 	}
 
+	var_dump($_FILES);
+
 	$gateway = new Braintree_Gateway([
 	    'environment' => 'sandbox',
 	    'merchantId' => 'dyt588zb54fwzht6',

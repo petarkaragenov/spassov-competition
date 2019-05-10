@@ -8,7 +8,7 @@
 	$rows = $winner->getDistinctEditions();
 ?>
 
-<?php include_once('../includes/head.php'); ?>
+<?php include_once('../includes/head_bg.php'); ?>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
 
@@ -20,30 +20,30 @@
 	  		<div class="collapse navbar-collapse" id="mainNavigation">
 			    <ul class="navbar-nav mr-auto">
 			      <li class="nav-item">
-			        <a class="nav-link" href="home">Home </a>
+			        <a class="nav-link" href="home">Начало</a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" href="info#requirements">Requirements</a>
+			        <a class="nav-link" href="info#requirements">Условия за участие</a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" href="info#jury">Jury</a>
+			        <a class="nav-link" href="info#jury">Жури</a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" href="info#prizes">Prizes</a>
+			        <a class="nav-link" href="info#prizes">награди</a>
 			      </li>
 			      <li class="nav-item active">
-			        <a class="nav-link" href="winners">Winners</a>
+			        <a class="nav-link" href="winners">Победители</a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" href="contact">Contact</a>
+			        <a class="nav-link" href="contact">Контакт</a>
 			      </li>
 			      <li class="nav-item d-lg-none">
-			        <a class="nav-link" href="apply">Apply Now</a>
+			        <a class="nav-link" href="apply">Записване</a>
 			      </li>
 			    </ul>
-	      		<a href="apply" class="btn btn-secondary my-2 my-sm-0 d-none d-lg-block">Apply Now</a>
-	      		<a href="../bg/winners" class="text-white ml-3 d-none d-lg-block">BG</a>
+	      		<a href="apply" class="btn btn-secondary my-2 my-sm-0 d-none d-lg-block">Записване</a>
 	      		<a href="../en/winners" class="text-white ml-2 d-none d-lg-block">EN</a>
+	      		<a href="../bg/winners" class="text-white ml-3 d-none d-lg-block">BG</a>
 	  		</div>
 	  	</div>
 	  	
@@ -53,33 +53,33 @@
 			<form action="winners" method="post">
 				<div class="row">
 					<div class="form-group col col-12 col-md-5 flex">
-						<label for="category">Category: </label>
+						<label for="category">Категория: </label>
 						<select class="form-control" name="category">
 							<option value="A">A</option>
-							<option value="B">B</option>
+							<option value="B">Б</option>
 						</select>
 					</div>
 					<div class="form-group col col-12 col-md-5 flex">
-						<label for="edition">Edition: </label>
+						<label for="edition">Издание: </label>
 						<select class="form-control" name="edition">
 						<?php 
 							for ($i=0; $i<count($rows); $i++) { 
 								$suffix;
 								if ($i == 0) {
-									$suffix = 'st';
+									$suffix = 'во';
 								} elseif ($i == 1) {
-									$suffix = 'nd';
-								} elseif ($i == 2) {
-									$suffix = 'rd';
+									$suffix = 'ро';
+								} elseif ($i == 6 || $i == 7) {
+									$suffix = 'мо';
 								} else {
-									$suffix = 'th';
+									$suffix = 'то';
 								} ?>
-								<option value=<?php echo $rows[$i]->edition; ?>><?php echo $rows[$i]->edition.$suffix; ?> Edition</option>
+								<option value=<?php echo $rows[$i]->edition; ?>><?php echo $rows[$i]->edition.$suffix; ?> издание</option>
 							<?php }	?>
 						</select>
 					</div>
 					<div class="col col-12 col-md-2">
-						<button class="btn btn-block btn-primary" name="submit">Show</button>
+						<button class="btn btn-block btn-primary" name="submit">Покажи</button>
 					</div>
 				</div>
 			</form>
@@ -97,30 +97,30 @@
 					$results = $winner->getWinners($category, $edition); 
 
 					if ($edition == 1) {
-							$suffix = 'st';
+							$suffix = 'во';
 						} elseif ($edition == 2) {
-							$suffix = 'nd';
-						} elseif ($edition == 3) {
-							$suffix = 'rd';
+							$suffix = 'ро';
+						} elseif ($edition == 7 || $edition == 8) {
+							$suffix = 'мо';
 						} else {
-							$suffix = 'th';
+							$suffix = 'то';
 						}
 			?>
-					<h2 class="pb-4">Winners of the <?php echo $edition; ?><sup><?php echo $suffix; ?></sup> Edition in Category <?php echo $category; ?></h2>
+					<h2 class="pb-4">Победители от <?php echo $edition; ?><sup><?php echo $suffix; ?></sup> издание в категория <?php echo $category; ?></h2>
 			<?php
 				} else {
 					$results = $winner->getWinners('A', count($rows)); ?>
-					<h2 class="pb-4">Winners of the <?php echo count($rows); ?><sup>th</sup> Edition in Category A</h2>
+					<h2 class="pb-4">Победители от <?php echo count($rows); ?><sup>то</sup> издание в категория А</h2>
 					<?php
 				} ?>
 
 					<table id="winners" class="table table-striped px-3 px-sm-0">
 						<thead>
 							<tr>
-								<th class="text-dark">Prize</th>
-								<th class="text-dark">Name</th>
-								<th class="text-dark">Country</th>
-								<th class="text-dark">Work</th>
+								<th class="text-dark">Награда</th>
+								<th class="text-dark">Име</th>
+								<th class="text-dark">Държава</th>
+								<th class="text-dark">Творба</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -139,7 +139,7 @@
 					</table>
 		</div>
 	</section>
-	<?php include_once('../includes/footer.php'); ?>
+	<?php include_once('../includes/footer_bg.php'); ?>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
